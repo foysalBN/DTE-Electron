@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>DTE Electron</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="index.css" /> -->
+</head>
+
+<body>
+  <!-- title -->
+  <div class="block" style="padding: 2em;">
+    <h1 class="title">🔥DTE Electron</h1>
+    <h2 class="subtitle is-6" style="padding-left: 2.2em;">A tool to Automate <b>DTE Stipend</b> repeating task</h2>
+
+    <p>👇 Select Automation type:</p>
+
+    <div style="display: flex; flex-direction: row; gap: 1em; ">
+      <div class="control has-icons-left">
+        <div class="select is-small">
+          <select>
+            <option selected>Collect MIS ID</option>
+            <option>Change Semester</option>
+            <option>Change Status to: Active </option>
+            <option>Change Status to: Deactivate </option>
+          </select>
+        </div>
+        <span class="icon is-small is-left">
+          <!-- <i class="fas fa-globe"></i> -->
+          <i class="far fa-keyboard"></i>
+        </span>
+      </div>
+
+      <button class="button is-success is-small">Start Automation</button>
+    </div>
+
+    <br>
+    <p>Enter Rolls (Copy & Paste from excel)</p>
+    <textarea class="textarea is-normal"
+      placeholder="Enter Roll. Put 1 roll each line. e.g:&#10;100001&#10;100002&#10;100003" rows="5"></textarea>
+    <p>Result</p>
+    <textarea class="textarea is-small" placeholder="Result will be in there" rows="5"></textarea>
+
+
+    <p style="text-align: end; padding: 1em 0;">Develop with <span style="color: red;">❤</span> by <a
+        href="http://github.com/foysalbn" target="_blank">foysalBN</a></p>
+  </div>
+
+</body>
+
+</html>
