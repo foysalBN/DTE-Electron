@@ -23,7 +23,11 @@
     "electron": "30.0.6",
     "nodemon": "^3.1.0"
   },
-  "keywords": [],
+  "keywords": [
+    "electron",
+    "DTE Stipend",
+    "puppeteer"
+  ],
   "author": {
     "name": "foysalBN",
     "email": "foysalbinnour@gmail.com"
