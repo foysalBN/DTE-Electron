@@ -1,21 +1,23 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const windowStateKeeper = require('electron-window-state');
 const path = require('node:path');
+const scrap = require('./scrap');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
+let mainWindow;
 const createWindow = () => {
   // Load the previous state with fallback to defaults
   let mainWindowState = windowStateKeeper({
     defaultWidth: 1000,
-    defaultHeight: 400
+    defaultHeight: 790
   });
 
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     x: mainWindowState.x,
     y: mainWindowState.y,
     width: mainWindowState.width,
@@ -40,6 +42,8 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
+  ipcMain.handle('scrap:start', startScrape)
+
   createWindow();
 
   // On OS X it's common to re-create a window in the app when the
@@ -62,3 +66,14 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+
+const startScrape = async (e, data) => {
+  const { type } = data
+
+  // send webContent to update
+  const result = await scrap.startScrap(data, async (updateMessage) => mainWindow.webContents.send('toast:update', updateMessage))
+  console.log("RESULT FROM SCRAP.JS: ", result);
+  // TODO:send it to renderer
+  mainWindow.webContents.send('scrap:end', result)
+}
