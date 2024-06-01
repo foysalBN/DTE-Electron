@@ -20,7 +20,8 @@
 
 .saber-toasts-container-top-right {
     right: 20px;
-    top: 20px;
+    /* top: 20px; */
+    top: 92px;
     flex-direction: column-reverse;
 }
 

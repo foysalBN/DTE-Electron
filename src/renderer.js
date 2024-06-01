@@ -106,3 +106,20 @@ const startAutomate = async () => {
 
 
 startBtn.addEventListener('click', startAutomate)
+
+document.getElementById('copy').addEventListener('click', function () {
+  const textarea = document.getElementById('output');
+  textarea.select();
+  textarea.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand('copy');
+
+  // Optionally, provide user feedback
+  saberToast.success({
+    title: "Output copied successfully.",
+    text: "You can paste in in excel 😊",
+    delay: 200,
+    duration: 3000,
+    position: 'top-right',
+    rtl: true,
+  })
+});

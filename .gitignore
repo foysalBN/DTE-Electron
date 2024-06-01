@@ -90,3 +90,6 @@ typings/
 
 # Electron-Forge
 out/
+
+# Test data
+testData.js
