@@ -1,4 +1,6 @@
 # DTE Electron
+![Developed by Badge](https://img.shields.io/badge/Dveloped_by-foysalBN-blue?logo=windowsterminal) <br>
+![Powerd by Badge](https://img.shields.io/badge/Powered_by-Electron%2ejs-3DCD58?logo=electron&logoColor=3DCD58)
 
 **DTE Electron** is a software tool designed to automate repetitive tasks related to the **[DTE Stipend](https://dte.finance.gov.bd/)** process. This application streamlines various administrative functions, making the management of stipend distribution more efficient and error-free.
 
