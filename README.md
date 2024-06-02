@@ -1,6 +1,6 @@
 # DTE Electron
 
-**DTE Electron** is a software tool designed to automate repetitive tasks related to the **DTE Stipend** process. This application streamlines various administrative functions, making the management of stipend distribution more efficient and error-free.
+**DTE Electron** is a software tool designed to automate repetitive tasks related to the **[DTE Stipend](https://dte.finance.gov.bd/)** process. This application streamlines various administrative functions, making the management of stipend distribution more efficient and error-free.
 
 ## Current Features
 
@@ -8,7 +8,7 @@
 
 ## Planned Features
 
-These features are planned for future releases. Currently, various functionalities are disabled on the **DTE Stipend** website.
+These features are planned for future releases. Currently, various functionalities are disabled on the **[DTE Stipend](https://dte.finance.gov.bd/)** website.
 
 - **Change Semester**: Seamlessly update the semester status for students.
 - **Change Status to Active**: Activate student status for stipend eligibility.
